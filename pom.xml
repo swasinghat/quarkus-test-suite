@@ -922,7 +922,8 @@
                     <plugin>
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
-                            <skipTests>true</skipTests>
+                            <!-- <skipTests>true</skipTests> -->
+                            <skipTests>false</skipTests>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -954,7 +955,7 @@
                                         <ts.redhat.registry.enabled>true</ts.redhat.registry.enabled>
                                         <!-- Product Services -->
                                         <amqbroker.image>registry.redhat.io/amq7/amq-broker-rhel8:7.12</amqbroker.image>
-                                        <rhbk.image>registry.redhat.io/rhbk/keycloak-rhel9:26.2</rhbk.image>
+                                        <rhbk.image>${rhbk.image}</rhbk.image>
                                         <keycloak.image>registry.redhat.io/rhbk/keycloak-rhel9:26.2</keycloak.image>
                                         <postgresql.13.image>registry.redhat.io/rhel9/postgresql-13:latest</postgresql.13.image>
                                         <postgresql.latest.image>registry.redhat.io/rhel9/postgresql-16:latest</postgresql.latest.image>
